@@ -1,10 +1,12 @@
-Below is a **clean, professional, open-source–ready README** for a *fundable* algorithmic-trading framework.
-It removes unnecessary code blocks, focuses on clarity, and uses a standard structure suitable for GitHub, open-source accelerators, and grant applications.
 
----
 
 # **ICT Algorithmic Trading Framework**
 
+
+https://img.shields.io/badge/Open%2520Source-Yes-brightgreen
+https://img.shields.io/badge/License-MIT-yellow.svg
+https://img.shields.io/badge/Python-3.8%252B-blue
+https://img.shields.io/badge/Data%2520Science-Framework-orange
 **Open-Source Infrastructure for Research, Backtesting, and Prop-Firm Integration**
 
 A modular, community-driven framework for algorithmic trading research.
