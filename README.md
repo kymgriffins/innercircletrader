@@ -1,285 +1,501 @@
-# 🧠 ICT Algorithmic Trading Framework
+# 🧠 ICT Algorithmic Trading Framework 
 
-> **Applying logical, repeatable processes to market analysis—like following a recipe in a complex kitchen.**
+> **A systematic, transparent framework for algorithmic trading strategies inspired by ICT concepts. Built for data scientists, quantitative analysts, and systematic traders.**
 
-This repository documents and implements the **structured, step-by-step approach** to trading derived from ICT (Inner Circle Trader) teachings, focusing on breaking down market behavior into clear, repeatable algorithms.
-
----
-
-## 🎯 **Core Philosophy**
-
-ICT's algorithmic principles transform trading from random guesswork into a **logical sequence of operations**. Think of it as:
-
-- **A trading recipe** – precise ingredients and steps for consistent results
-- **A decision flowchart** – clear if/then logic replacing emotional reactions  
-- **A repeatable model** – testable patterns that recur under specific conditions
-
-As ICT emphasizes: *"An algorithm is simply a set of instructions designed to perform a specific task or solve a problem."* This repository applies that definition to market analysis.
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)](https://opensource.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Data Science](https://img.shields.io/badge/Data%20Science-Framework-orange)](https://)
 
 ---
 
-## 🔄 **The Algorithmic Mindset**
-
-### **Key Principles from ICT Teachings:**
-
-1. **Structure Over Chaos**
-   - Markets follow algorithmic patterns, especially around specific times
-   - These "signatures" repeat and become predictable
-   - Example: London vs. New York session behaviors
-
-2. **Step-by-Step Process**
-   - Each decision flows logically from the previous one
-   - No step is arbitrary or based on "intuition"
-   - Clear entry → management → exit sequences
-
-3. **Repeatable & Testable Models**
-   - If it can't be backtested, it can't be trusted
-   - Models must work across multiple market conditions
-   - Statistical validation over anecdotal evidence
-
-4. **Time-Based Focus**
-   - Specific times produce specific behaviors
-   - Session transitions create algorithmic opportunities
-   - Economic events follow predictable patterns
+## 📋 **Table of Contents**
+- [Overview](#-overview)
+- [Features](#-features)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Architecture](#-architecture)
+- [Algorithms](#-algorithms)
+- [Data Science Integration](#-data-science-integration)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
-## 📊 **The Algorithmic Framework**
+## 🎯 **Overview**
 
-### **Our Implementation Structure:**
+This open-source framework implements **systematic trading algorithms** inspired by ICT (Inner Circle Trader) market concepts, adapted for data science workflows and quantitative analysis. The framework provides:
 
-```
-📈 MARKET ANALYSIS ALGORITHM
-├── 1. IDENTIFY MARKET STATE
-│   ├── Determine session (Asian/London/NY)
-│   ├── Check economic calendar
-│   └── Assess overall bias (Higher Timeframe)
-│
-├── 2. SCAN FOR PATTERNS
-│   ├── Market Structure shifts
-│   ├── Order Block formations
-│   ├── Fair Value Gaps
-│   └── Liquidity concentrations
-│
-├── 3. APPLY TIME FILTERS
-│   ├── Is this a "setup time"? (e.g., 9:30 AM NY)
-│   ├── Session overlap analysis
-│   └── Duration of current move
-│
-├── 4. EXECUTE DECISION TREE
-│   ├── If [condition A] then [action X]
-│   ├── If [condition B] then [action Y]
-│   └── Default: Wait for clarity
-│
-├── 5. MANAGE TRADE
-│   ├── Dynamic stop placement
-│   ├── Partial profit taking
-│   └── Trail or exit logic
-│
-└── 6. REVIEW & ADAPT
-    ├── Record trade metrics
-    ├── Compare to model expectations
-    └── Refine algorithm if needed
+- **Statistical validation** of trading patterns
+- **Repeatable algorithmic processes**
+- **Data-driven market analysis**
+- **Backtesting and performance analytics**
+
+> **Note:** This is an educational framework for studying market patterns and algorithmic trading. Not financial advice.
+
+---
+
+## ✨ **Features**
+
+### **📊 Data Science Ready**
+- **Pandas/NumPy integration** for financial analysis
+- **Scikit-learn compatible** for ML applications
+- **Jupyter notebook examples** with full documentation
+- **Standardized data formats** (OHLC, tick, order book)
+
+### **🔬 Research Focused**
+- **Reproducible research** designs
+- **Statistical significance testing** for patterns
+- **Cross-market validation** tools
+- **Hypothesis testing framework**
+
+### **⚙️ Production Quality**
+- **Modular architecture** with clear interfaces
+- **Unit tested** components
+- **Performance optimized** for large datasets
+- **API-first design** for integration
+
+---
+
+## 📦 **Installation**
+
+### **Option 1: Pip Installation**
+```bash
+pip install ict-algo-framework
 ```
 
+### **Option 2: From Source**
+```bash
+git clone https://github.com/yourusername/ict-algorithmic-framework.git
+cd ict-algorithmic-framework
+pip install -e .
+```
+
+### **Option 3: Docker**
+```bash
+docker pull ictframework/algo:latest
+docker run -p 8888:8888 ictframework/algo
+```
+
+### **Dependencies**
+```txt
+python>=3.8
+pandas>=1.3
+numpy>=1.21
+scipy>=1.7
+matplotlib>=3.4
+scikit-learn>=1.0
+ta-lib>=0.4  # Technical analysis library
+```
+
 ---
 
-## 🧩 **Core Algorithmic Models**
+## 🚀 **Quick Start**
 
-### **1. Time-Based Market Model**
+### **1. Basic Pattern Detection**
 ```python
-# Pseudocode: Session-Based Algorithm
-if session == "London_Open":
-    look_for = ["liquidity_grab", "initial_range"]
-    time_window = "07:00-09:00 GMT"
-    bias = higher_timeframe_direction
-    
-elif session == "NY_Midday":
-    look_for = ["retracement", "FVG_fill"]
-    time_window = "13:00-15:00 GMT"
-    bias = london_session_direction
+import ictalgo as ia
+import pandas as pd
+
+# Load market data
+data = pd.read_csv('market_data.csv', parse_dates=['timestamp'])
+data.set_index('timestamp', inplace=True)
+
+# Initialize the framework
+framework = ia.ICTAlgorithmicFramework()
+
+# Detect Fair Value Gaps (FVGs)
+fvgs = framework.patterns.detect_fvg(
+    data=data,
+    lookback_periods=20,
+    min_gap_size=0.0005  # For forex
+)
+
+print(f"Found {len(fvgs)} Fair Value Gaps")
+print(fvgs.head())
 ```
 
-### **2. Pattern Recognition Algorithm**
+### **2. Session-Based Analysis**
 ```python
-# Pseudocode: Pattern Detection Flow
-def detect_trading_opportunity(price_data):
-    # Step 1: Check market structure
-    if market_structure_shift_detected():
-        # Step 2: Look for order blocks
-        ob = find_order_block(zone="discount" if bullish else "premium")
-        
-        # Step 3: Verify with FVG
-        fvg = check_fvg_alignment(ob)
-        
-        # Step 4: Check liquidity targets
-        liq = identify_liquidity_pool(ob, fvg)
-        
-        # Step 5: Apply time filter
-        if is_correct_time_window():
-            return generate_signal(ob, fvg, liq)
-    
-    return "NO_TRADE"
+from ictalgo.sessions import SessionAnalyzer
+
+# Analyze London session patterns
+analyzer = SessionAnalyzer()
+london_stats = analyzer.analyze_session(
+    data=data,
+    session='London',
+    start_time='07:00',
+    end_time='16:00'
+)
+
+# Generate statistical report
+report = analyzer.generate_report(london_stats)
+report.save_html('london_session_analysis.html')
 ```
 
-### **3. Risk Management Algorithm**
+### **3. Backtesting Example**
 ```python
-# Pseudocode: Position Sizing Logic
-def calculate_position_size():
-    account_risk = 0.01  # 1% per trade
-    stop_distance = entry - stop_loss
-    
-    # Algorithmic adjustment based on market state
-    if high_volatility_session():
-        account_risk *= 0.5  # Reduce risk in volatile times
-    
-    if multiple_confirmations():
-        account_risk *= 1.5  # Increase with strong signals
-    
-    position_size = (account_risk * account_balance) / stop_distance
-    return position_size
+from ictalgo.backtesting import VectorizedBacktester
+
+# Define algorithmic strategy
+strategy = {
+    'name': 'London Breakout',
+    'conditions': [
+        'session == "London"',
+        'volume > volume.rolling(20).mean() * 1.5',
+        'detected_fvg == True'
+    ],
+    'entry': 'break_high' if bullish else 'break_low',
+    'exit': 'target_reached OR stop_loss_hit'
+}
+
+# Run backtest
+backtester = VectorizedBacktester(data, strategy)
+results = backtester.run(
+    initial_capital=10000,
+    commission=0.0001
+)
+
+# Analyze performance
+print(results.metrics)
+results.plot_equity_curve()
 ```
 
 ---
 
-## 📁 **Repository Structure**
+## 🏗️ **Architecture**
 
 ```
-📁 ict-algorithmic-framework/
+ict-algorithmic-framework/
 │
-├── 📚 DOCUMENTATION/
-│   ├── Core_Principles/          # ICT's algorithmic philosophy
-│   ├── Pattern_Algorithms/       # Step-by-step detection logic
-│   ├── Time_Models/              # Session-based algorithms
-│   └── Decision_Trees/           # Flowcharts for every scenario
+├── 📁 core/                    # Core framework modules
+│   ├── patterns/              # Pattern detection algorithms
+│   ├── sessions/              # Time-based analysis
+│   ├── liquidity/             # Liquidity detection models
+│   └── market_structure/      # Structure analysis
 │
-├── 🔬 RESEARCH/
-│   ├── Pattern_Recurrence/       # Statistical validation
-│   ├── Time_Studies/             # When algorithms work best
-│   ├── Backtest_Results/         # Historical performance
-│   └── Edge_Cases/               # When algorithms break
+├── 📁 data/                   # Data handling
+│   ├── sources/              # Data source connectors
+│   ├── processors/           # Data cleaning & feature engineering
+│   └── storage/              # Data persistence
 │
-├── 🧪 IMPLEMENTATION/
-│   ├── Detection_Engines/        # Pattern recognition code
-│   ├── Signal_Generators/        # Trade decision logic
-│   ├── Risk_Calculators/         # Position management
-│   └── Performance_Analyzers/    # Model validation
+├── 📁 models/                 # Statistical & ML models
+│   ├── statistical/          # Hypothesis testing
+│   ├── machine_learning/     # ML pattern recognition
+│   └── validation/           # Model validation
 │
-└── 📊 TOOLS/
-    ├── Market_Scanners/          # Real-time pattern detection
-    ├── Journal_Templates/        # Algorithmic trade logging
-    ├── Checklist_Generators/     # Pre-trade validation
-    └── Model_Optimizers/         # Parameter refinement
+├── 📁 backtesting/           # Backtesting engines
+│   ├── vectorized/           # Fast vectorized backtesting
+│   ├── event_based/          # Event-driven simulation
+│   └── metrics/              # Performance metrics
+│
+├── 📁 visualization/         # Visualization tools
+│   ├── patterns/             # Pattern visualization
+│   ├── performance/          # Results visualization
+│   └── reports/              # Automated reporting
+│
+├── 📁 research/              # Research utilities
+│   ├── notebooks/            # Jupyter notebook examples
+│   ├── experiments/          # Experimental algorithms
+│   └── papers/               # Research documentation
+│
+└── 📁 api/                   # API interfaces
+    ├── rest/                 # REST API
+    ├── streaming/            # Real-time data API
+    └── clients/              # Client libraries
 ```
 
 ---
 
-## 🎓 **Learning Path**
+## 🧮 **Algorithms**
 
-### **Start Here:**
-1. **Understand the Algorithmic Mindset** – It's about process, not prediction
-2. **Master One Model** – Learn it thoroughly before adding complexity
-3. **Paper Trade the Algorithm** – Follow steps without real money
-4. **Record Everything** – What worked, what didn't, why
-5. **Refine Systematically** – Adjust based on data, not emotions
-
-### **Key ICT Algorithmic Concepts:**
-- **Market Maker Models** – How institutions algorithmically move price
-- **Time-Based Setups** – Specific times for specific patterns
-- **Liquidity Hunting** – Algorithmic targeting of retail stops
-- **Order Flow Algorithms** – Institutional execution patterns
-
----
-
-## ⚙️ **Implementation Example**
-
-### **The London Open Algorithm:**
-```
-TIME: 07:00-08:00 GMT
-OBJECTIVE: Capture initial directional move
-STEPS:
-1. Identify overnight range
-2. Mark Asian session highs/lows (liquidity)
-3. Wait for London participants to enter
-4. Trade break of Asian range with stop beyond opposite liquidity
-5. Target previous day's high/low (next liquidity pool)
-```
-
-### **Coded Logic:**
+### **1. Statistical Pattern Detection**
 ```python
-class LondonOpenAlgorithm:
-    def __init__(self):
-        self.setup_time = "07:00"
-        self.expiry_time = "09:00"
-        self.required_confirmations = 3
-        
-    def check_setup(self, market_data):
-        """ICT's London Open algorithmic checklist"""
-        checks = [
-            self.asian_range_established(),
-            self.liquidity_marked(),
-            self.volume_increasing(),
-            self.time_window_valid()
-        ]
-        
-        return sum(checks) >= self.required_confirmations
+from ictalgo.patterns.statistical import PatternValidator
+
+# Test if FVGs have statistical significance
+validator = PatternValidator()
+
+results = validator.test_pattern_significance(
+    pattern='fvg',
+    data=data,
+    test_method='bootstrap',
+    n_iterations=1000,
+    confidence_level=0.95
+)
+
+print(f"Pattern is significant: {results.significant}")
+print(f"P-value: {results.p_value:.4f}")
+print(f"Effect size: {results.effect_size:.4f}")
+```
+
+### **2. Machine Learning Integration**
+```python
+from ictalgo.models.ml import PatternClassifier
+from sklearn.ensemble import RandomForestClassifier
+
+# Train ML model to detect Order Blocks
+classifier = PatternClassifier(
+    model=RandomForestClassifier(n_estimators=100),
+    features=['price', 'volume', 'volatility', 'time_of_day']
+)
+
+# Prepare labeled data
+X_train, y_train, X_test, y_test = classifier.prepare_data(
+    data=data,
+    pattern='order_block',
+    lookahead_bars=5
+)
+
+# Train and evaluate
+classifier.train(X_train, y_train)
+accuracy = classifier.evaluate(X_test, y_test)
+print(f"Model accuracy: {accuracy:.2%}")
+```
+
+### **3. Multi-Timeframe Analysis**
+```python
+from ictalgo.analysis import MultiTimeframeAnalyzer
+
+mta = MultiTimeframeAnalyzer()
+
+# Analyze alignment across timeframes
+alignment = mta.analyze_alignment(
+    data_dict={
+        'M5': data_m5,
+        'H1': data_h1,
+        'H4': data_h4
+    },
+    pattern='market_structure_shift'
+)
+
+# Get convergence signals
+if alignment.convergence_score > 0.8:
+    print("Strong multi-timeframe alignment detected")
+    print(f"Direction: {alignment.consensus_direction}")
 ```
 
 ---
 
-## 📈 **Why This Approach Works**
+## 📈 **Data Science Integration**
 
-### **The Algorithmic Advantage:**
-1. **Removes Emotion** – You follow steps, not feelings
-2. **Creates Consistency** – Same process every time
-3. **Enables Improvement** – Can optimize what's measured
-4. **Scales Effectively** – Can be automated or delegated
-5. **Survives Drawdowns** – Process remains during losses
+### **1. Feature Engineering Pipeline**
+```python
+from ictalgo.data.processors import FeatureEngineer
 
-### **As ICT States:**
-> *"It's not about memorizing every detail, but about understanding the main points of focus and application—essentially, knowing what to look for and when to act."*
+# Create trading features
+engineer = FeatureEngineer()
+
+features = engineer.create_features(
+    data=data,
+    include=[
+        'returns', 'volatility', 'volume_profile',
+        'session_indicators', 'liquidity_zones',
+        'pattern_density', 'market_regime'
+    ]
+)
+
+# Standardize for ML
+features_scaled = engineer.scale_features(features)
+```
+
+### **2. Hypothesis Testing Framework**
+```python
+from ictalgo.research import TradingHypothesis
+
+# Define and test trading hypothesis
+hypothesis = TradingHypothesis(
+    name="London Open Breakout Edge",
+    null_hypothesis="London open breakouts have no predictive power",
+    alternative_hypothesis="London open breakouts predict direction",
+    test_data=data,
+    test_period='2020-2023'
+)
+
+# Run comprehensive tests
+results = hypothesis.test(
+    tests=['t_test', 'monte_carlo', 'out_of_sample'],
+    confidence_level=0.95
+)
+
+# Generate research report
+report = hypothesis.generate_report()
+report.publish(format='html')
+```
+
+### **3. Performance Analytics**
+```python
+from ictalgo.metrics import AdvancedMetrics
+
+metrics = AdvancedMetrics(trades=backtest_results.trades)
+
+# Comprehensive analysis
+analysis = {
+    'returns': metrics.calculate_returns(),
+    'risk': metrics.calculate_risk_metrics(),
+    'drawdown': metrics.analyze_drawdowns(),
+    'stability': metrics.performance_stability(),
+    'significance': metrics.statistical_significance()
+}
+
+# Create visualization dashboard
+dashboard = metrics.create_dashboard(analysis)
+dashboard.show()
+```
 
 ---
 
-## 🚀 **Getting Started**
+## 🔬 **Research Examples**
 
-1. **Fork this repository** – Create your algorithmic framework
-2. **Study `/DOCUMENTATION/Core_Principles`** – Understand the mindset
-3. **Pick one time-based model** – Master it completely
-4. **Create your checklist** – Every step in your algorithm
-5. **Paper trade for 30 days** – Prove the algorithm works
-6. **Start small, scale slowly** – Algorithmic confidence comes from results
+### **Jupyter Notebook: Pattern Recurrence Study**
+```python
+# See /research/notebooks/pattern_recurrence.ipynb
+
+# Study how often patterns repeat
+recurrence_study = {
+    'pattern': 'fair_value_gap',
+    'markets': ['EURUSD', 'GBPUSD', 'XAUUSD'],
+    'timeframes': ['M5', 'M15', 'H1'],
+    'period': '2_years',
+    'metrics': ['recurrence_rate', 'accuracy', 'profit_factor']
+}
+
+# Run study
+results = run_recurrence_study(recurrence_study)
+
+# Visualize results
+plot_correlation_matrix(results.correlation)
+plot_heatmap(results.accuracy_by_market_timeframe)
+```
+
+### **Research Paper Template**
+```latex
+\documentclass{article}
+\usepackage{ictalgo}
+
+\title{Statistical Analysis of ICT Patterns in Forex Markets}
+\author{Research Team}
+
+\begin{document}
+% Automated research paper generation
+\section{Methodology}
+\methodology{pattern='order_block', test='bootstrap'}
+
+\section{Results}
+\results{metrics=['sharpe', 'max_dd', 'win_rate']}
+
+\section{Conclusion}
+\conclusion{significance_level=0.05}
+\end{document}
+```
 
 ---
 
-## 🤝 **Contributing to Algorithmic Trading**
+## 🤝 **Contributing**
 
-We're building a **library of trading algorithms** based on ICT principles. Contributions welcome:
+We welcome contributions from data scientists, quant researchers, and developers!
 
-1. **Documented algorithms** – Clear step-by-step processes
-2. **Backtest results** – Evidence-based validations
-3. **Code implementations** – Clean, commented algorithms
-4. **Case studies** – Real-world applications
+### **Contribution Areas:**
+1. **Algorithm Development** - New pattern detection algorithms
+2. **Statistical Methods** - Enhanced hypothesis testing
+3. **ML Models** - Improved pattern recognition
+4. **Data Processing** - Efficient data pipelines
+5. **Visualization** - Better analysis tools
+6. **Documentation** - Tutorials and examples
 
-**Rule:** Every algorithm must be:
-- Logically sound (if A then B)
-- Time-testable (works when backtested)
-- Psychologically viable (humans can execute it)
+### **Development Setup:**
+```bash
+# 1. Fork and clone
+git clone https://github.com/yourusername/ict-algorithmic-framework.git
+
+# 2. Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 3. Install development dependencies
+pip install -e ".[dev]"
+
+# 4. Run tests
+pytest tests/
+
+# 5. Make changes and submit PR
+```
+
+### **Coding Standards:**
+- Follow PEP 8 guidelines
+- Include type hints
+- Write comprehensive docstrings
+- Add unit tests for new features
+- Update documentation
 
 ---
 
-## ⚠️ **Algorithmic Trading Realities**
+## 📚 **Learning Resources**
 
-- **No Holy Grail** – Even good algorithms have losing periods
-- **Market Adaptation** – Algorithms need occasional updating
-- **Execution Matters** – A good algorithm with poor execution fails
-- **Risk First** – Position sizing determines survival
+### **Jupyter Notebook Tutorials:**
+1. `01_pattern_detection_basics.ipynb` - Basic pattern recognition
+2. `02_statistical_validation.ipynb` - Testing pattern significance
+3. `03_backtesting_framework.ipynb` - Complete backtesting workflow
+4. `04_machine_learning.ipynb` - ML integration examples
+5. `05_production_pipeline.ipynb` - Production deployment
 
-> *"The goal isn't perfection—it's a profitable edge that can be systematically applied."*
+### **Video Tutorials:**
+- [Introduction to Algorithmic Trading Framework](link)
+- [Statistical Validation Methods](link)
+- [Building Your First Strategy](link)
+
+### **Community:**
+- **Discord**: Join our data science trading community
+- **GitHub Discussions**: Share research and ask questions
+- **Monthly Webinars**: Live coding sessions
 
 ---
 
-**📌 Remember:** You're not predicting the market. You're following an algorithm that identifies high-probability scenarios based on recurring market behaviors.
+## 📄 **License**
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+**Key Points:**
+- Free for commercial and non-commercial use
+- Attribution required
+- No warranty provided
+- Not financial advice
 
 ---
-*Building systematic edges through algorithmic precision.*
+
+## ⚠️ **Disclaimer**
+
+**THIS IS NOT FINANCIAL ADVICE.**
+
+This framework is for:
+- **Educational purposes** only
+- **Research and study** of market patterns
+- **Academic research** in quantitative finance
+- **Learning algorithmic trading** concepts
+
+**Risks:**
+- Past performance doesn't guarantee future results
+- All trading involves risk of loss
+- Test thoroughly before live trading
+- Consult financial advisors for personal advice
+
+---
+
+## 🌟 **Acknowledgments**
+
+- Inspired by ICT market concepts
+- Built by and for the data science community
+- Thanks to all contributors and researchers
+- Special thanks to the open-source financial analysis community
+
+---
+
+**🔗 Connect With Us:**
+- GitHub: [ict-algorithmic-framework](https://github.com/yourusername/ict-algorithmic-framework)
+- Documentation: [ReadTheDocs](https://ict-algo-framework.readthedocs.io/)
+- Discord: [Join Community](https://discord.gg/yourlink)
+- Twitter: [@ICTAlgoFramework](https://twitter.com/ICTAlgoFramework)
+
+---
+
+*Building better trading algorithms through open collaboration and data science.* 🚀📊🔬
