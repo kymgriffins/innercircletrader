@@ -143,8 +143,6 @@ This is a **living documentation** project. Have insights on ICT concepts? Found
 
 > *"The goal isn't to automate intuition—it's to codify repeatable market behavior."*
 
----
-**📍 Navigation Tip:** Start with `0_PROJECT_HUB.md` for the complete roadmap and current focus areas.
 
 ---
 *Building systematic edges for the gr8 algorithmic frontier.*
