@@ -1,6 +1,5 @@
-# innercircletrader
-Inner Circle Trader Algorithmic Trading Concepts ( Michael J Huddleston)
-# 📈 ICT Algorithmic Trading Concepts Repository
+
+# 📈 ICT Algorithmic Trading Concepts  Concepts ( Michael J Huddleston)
 
 > **Crafting solutions for the gr8 of algorithmic traders.**  
 > A systematic documentation framework for translating ICT (Inner Circle Trader) concepts into algorithmic trading logic.
