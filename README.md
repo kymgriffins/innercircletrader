@@ -1,501 +1,521 @@
-# 🧠 ICT Algorithmic Trading Framework 
+# 🚀 **ICT Algorithmic Framework - Open Source Development & Strategic Partnerships**
 
-> **A systematic, transparent framework for algorithmic trading strategies inspired by ICT concepts. Built for data scientists, quantitative analysts, and systematic traders.**
+> **Building a comprehensive ecosystem for algorithmic trading research with community infrastructure and industry partnerships.**
 
-[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)](https://opensource.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![Data Science](https://img.shields.io/badge/Data%20Science-Framework-orange)](https://)
+## 🤝 **Call for Strategic Contributors & Partners**
 
----
+We're building a **complete ecosystem** for algorithmic trading research and need partners in these key areas:
 
-## 📋 **Table of Contents**
-- [Overview](#-overview)
-- [Features](#-features)
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Architecture](#-architecture)
-- [Algorithms](#-algorithms)
-- [Data Science Integration](#-data-science-integration)
-- [Contributing](#-contributing)
-- [License](#-license)
+### **1. 🏢 Infrastructure Partners**
+**We need:**
+- **Cloud hosting providers** (AWS, GCP, Azure credits)
+- **VPS/dedicated servers** for backtesting
+- **Database hosting** (TimescaleDB, ClickHouse)
+- **CI/CD pipelines** for automated testing
 
----
-
-## 🎯 **Overview**
-
-This open-source framework implements **systematic trading algorithms** inspired by ICT (Inner Circle Trader) market concepts, adapted for data science workflows and quantitative analysis. The framework provides:
-
-- **Statistical validation** of trading patterns
-- **Repeatable algorithmic processes**
-- **Data-driven market analysis**
-- **Backtesting and performance analytics**
-
-> **Note:** This is an educational framework for studying market patterns and algorithmic trading. Not financial advice.
-
----
-
-## ✨ **Features**
-
-### **📊 Data Science Ready**
-- **Pandas/NumPy integration** for financial analysis
-- **Scikit-learn compatible** for ML applications
-- **Jupyter notebook examples** with full documentation
-- **Standardized data formats** (OHLC, tick, order book)
-
-### **🔬 Research Focused**
-- **Reproducible research** designs
-- **Statistical significance testing** for patterns
-- **Cross-market validation** tools
-- **Hypothesis testing framework**
-
-### **⚙️ Production Quality**
-- **Modular architecture** with clear interfaces
-- **Unit tested** components
-- **Performance optimized** for large datasets
-- **API-first design** for integration
-
----
-
-## 📦 **Installation**
-
-### **Option 1: Pip Installation**
-```bash
-pip install ict-algo-framework
+**What partners get:**
+```
+✅ Brand recognition as "Official Infrastructure Partner"
+✅ Technical showcase of your platform
+✅ Access to trading algorithm community
+✅ Featured in research papers and presentations
+✅ Priority support for your clients using our framework
 ```
 
-### **Option 2: From Source**
-```bash
-git clone https://github.com/yourusername/ict-algorithmic-framework.git
-cd ict-algorithmic-framework
-pip install -e .
+**Example Partnership:**
+```yaml
+partnership_offer:
+  type: infrastructure
+  requirements:
+    - hosting_credits: $5000/month
+    - storage: 10TB+
+    - compute: 100+ vCPU cores
+    - gpu_access: optional
+  benefits:
+    - featured_logo: "Powered by [Partner Name]"
+    - case_study: published research using your platform
+    - co_webinars: joint educational events
+    - early_access: to new algorithmic models
 ```
 
-### **Option 3: Docker**
-```bash
-docker pull ictframework/algo:latest
-docker run -p 8888:8888 ictframework/algo
+### **2. 📊 Market Data Providers**
+**We need:**
+- **Real-time data feeds** (forex, crypto, stocks, futures)
+- **Historical tick data** with depth-of-book
+- **Economic calendar APIs**
+- **Order flow data** (Time & Sales, footprint charts)
+
+**What partners get:**
+```
+✅ Integrated data access in framework
+✅ Showcase your data quality in research
+✅ Community adoption of your APIs
+✅ Feedback from quantitative researchers
+✅ Co-development of data standards
 ```
 
-### **Dependencies**
-```txt
-python>=3.8
-pandas>=1.3
-numpy>=1.21
-scipy>=1.7
-matplotlib>=3.4
-scikit-learn>=1.0
-ta-lib>=0.4  # Technical analysis library
-```
-
----
-
-## 🚀 **Quick Start**
-
-### **1. Basic Pattern Detection**
+**Data Partnership Structure:**
 ```python
-import ictalgo as ia
-import pandas as pd
-
-# Load market data
-data = pd.read_csv('market_data.csv', parse_dates=['timestamp'])
-data.set_index('timestamp', inplace=True)
-
-# Initialize the framework
-framework = ia.ICTAlgorithmicFramework()
-
-# Detect Fair Value Gaps (FVGs)
-fvgs = framework.patterns.detect_fvg(
-    data=data,
-    lookback_periods=20,
-    min_gap_size=0.0005  # For forex
-)
-
-print(f"Found {len(fvgs)} Fair Value Gaps")
-print(fvgs.head())
+class DataPartnership:
+    def __init__(self, provider):
+        self.provider = provider
+        self.data_access = {
+            'real_time': 'WebSocket/REST API',
+            'historical': '10+ years tick data',
+            'frequency': 'tick level where available'
+        }
+        self.integration = {
+            'native_client': True,
+            'caching_layer': 'Redis/Memcached',
+            'validation_suite': 'Data quality checks'
+        }
 ```
 
-### **2. Session-Based Analysis**
+### **3. 🏦 Prop Firm Partnerships**
+**We need:**
+- **Evaluation challenges** for community members
+- **Live funding opportunities** for proven strategies
+- **Performance tracking** infrastructure
+- **Risk management collaboration**
+
+**What partners get:**
+```
+✅ Pipeline of tested algorithmic strategies
+✅ Community-driven strategy development
+✅ Reduced acquisition costs for talented traders
+✅ Research collaboration on risk models
+✅ Brand presence in algo trading community
+```
+
+**Prop Firm Integration:**
+```yaml
+prop_framework_integration:
+  evaluation_process:
+    - phase_1: "Framework backtest validation"
+    - phase_2: "Paper trading in our simulator"
+    - phase_3: "Prop firm challenge with adjusted parameters"
+    - funding: "Direct funding for passing strategies"
+  
+  shared_metrics:
+    - sharpe_ratio: "> 1.5 minimum"
+    - max_drawdown: "< 10%"
+    - win_rate: "> 45%"
+    - profit_factor: "> 1.3"
+    - consistency_score: "Monthly positive returns"
+```
+
+### **4. 🏆 Challenge & Competition Sponsors**
+**We need:**
+- **Prize pools** for algorithm competitions
+- **Sponsorship** for hackathons
+- **Judges/mentors** from industry
+- **Internship opportunities** for top performers
+
+## 📋 **Partnership Framework**
+
+### **Tier 1: Infrastructure Partner**
+```
+💰 Contribution: $5,000+ in credits/services monthly
+🎁 Benefits:
+  • "Official Infrastructure Partner" badge
+  • Featured in all documentation
+  • Dedicated case studies
+  • Speaking slots at webinars
+  • Priority integration support
+  • Company logo in README and website
+```
+
+### **Tier 2: Data & API Partner**
+```
+💰 Contribution: Real-time data feeds + historical data
+🎁 Benefits:
+  • "Official Data Provider" badge
+  • Native SDK integration
+  • Co-marketing opportunities
+  • Access to beta features
+  • Community workshop sponsorship
+```
+
+### **Tier 3: Prop Trading Partner**
+```
+💰 Contribution: Evaluation challenges + funding accounts
+🎁 Benefits:
+  • "Funding Partner" designation
+  • Direct pipeline of traders
+  • Co-research opportunities
+  • Custom risk model development
+  • White-label analytics platform
+```
+
+### **Tier 4: Community Sponsor**
+```
+💰 Contribution: $500-$5,000 one-time or monthly
+🎁 Benefits:
+  • Listed as "Community Sponsor"
+  • Logo in contributors section
+  • Early access to releases
+  • Discord server recognition
+```
+
+## 🏗️ **Technical Infrastructure Needs**
+
+### **1. Development Infrastructure**
+```yaml
+development_stack:
+  cloud_services:
+    - github_actions: "CI/CD pipelines"
+    - docker_hub: "Container registry"
+    - readthedocs: "Documentation hosting"
+    - discord_bot_hosting: "Community bots"
+  
+  testing_environment:
+    - backtest_cluster: "100+ cores for parallel testing"
+    - gpu_instances: "ML model training"
+    - storage: "10TB+ for historical data"
+    - memory: "512GB+ for in-memory processing"
+```
+
+### **2. Community Platform**
+```yaml
+community_features:
+  hosted_services:
+    - strategy_sharing_platform: "GitHub for trading algos"
+    - live_leaderboard: "Real-time performance tracking"
+    - paper_trading_server: "Community simulation"
+    - research_paper_hosting: "arXiv for trading strategies"
+  
+  educational_resources:
+    - interactive_notebooks: "JupyterHub instance"
+    - video_hosting: "Tutorial and webinar recordings"
+    - certification_server: "Algorithmic trading certifications"
+```
+
+### **3. Production Environment**
+```yaml
+production_requirements:
+  data_pipelines:
+    - real_time_processing: "Kafka/Redpanda clusters"
+    - historical_storage: "ClickHouse/TimescaleDB"
+    - cache_layer: "Redis cluster"
+    - backup_system: "Automated S3 backups"
+  
+  monitoring:
+    - performance_metrics: "Prometheus/Grafana"
+    - alerting_system: "PagerDuty/Telegram bots"
+    - logging: "ELK stack"
+    - uptime_monitoring: "Status page"
+```
+
+## 📝 **How to Contribute/Partner**
+
+### **For Companies/Organizations:**
+1. **Fill our partnership form:**
+   ```markdown
+   https://forms.gle/ictframework-partners
+   
+   Required Information:
+   - Company name and website
+   - Type of contribution (hosting, data, funding, etc.)
+   - Estimated value of contribution
+   - Contact person and role
+   - Desired partnership tier
+   ```
+
+2. **Join our partner Discord channel:**
+   ```
+   https://discord.gg/ict-partners
+   #partnership-discussions
+   ```
+
+3. **Schedule a technical integration call:**
+   ```
+   Calendly: https://calendly.com/ict-framework/partner-intro
+   ```
+
+### **For Individual Contributors:**
+1. **Infrastructure Experts:**
+   ```bash
+   # We need help with:
+   - Kubernetes cluster setup
+   - High-frequency data pipelines
+   - Distributed backtesting systems
+   - Database optimization
+   
+   # Join: https://github.com/ict-algorithmic-framework/infrastructure
+   ```
+
+2. **Data Engineers:**
+   ```bash
+   # We need help with:
+   - Data normalization pipelines
+   - Real-time API development
+   - Historical data cleaning
+   - Data validation frameworks
+   
+   # Join: https://github.com/ict-algorithmic-framework/data-pipelines
+   ```
+
+3. **Quant Researchers:**
+   ```bash
+   # We need help with:
+   - Strategy validation frameworks
+   - Statistical analysis tools
+   - Risk model development
+   - Performance metrics
+   
+   # Join: https://github.com/ict-algorithmic-framework/research
+   ```
+
+## 🎯 **Prop Firm Integration Program**
+
+### **The Challenge Framework:**
 ```python
-from ictalgo.sessions import SessionAnalyzer
-
-# Analyze London session patterns
-analyzer = SessionAnalyzer()
-london_stats = analyzer.analyze_session(
-    data=data,
-    session='London',
-    start_time='07:00',
-    end_time='16:00'
-)
-
-# Generate statistical report
-report = analyzer.generate_report(london_stats)
-report.save_html('london_session_analysis.html')
+class PropFirmChallenge:
+    def __init__(self, firm_name, requirements):
+        self.firm = firm_name
+        self.requirements = requirements
+        self.integration = {
+            'api_access': 'Real-time trading API',
+            'evaluation_criteria': requirements['metrics'],
+            'funding_tiers': requirements['funding_levels']
+        }
+    
+    def create_challenge(self):
+        """Generate a standardized evaluation challenge"""
+        return {
+            'phase_1': 'Backtest validation in our framework',
+            'phase_2': 'Paper trading with our simulator',
+            'phase_3': 'Live evaluation with prop firm',
+            'success_metrics': self.requirements['metrics']
+        }
 ```
 
-### **3. Backtesting Example**
+### **Current Prop Firm Partners:**
+```yaml
+partner_firms:
+  - name: "FTMO"
+    integration_status: "In discussion"
+    offered_funding: "$400,000 max"
+    challenge_type: "Standard + Aggressive"
+    special_terms: "10% discount for framework users"
+  
+  - name: "MyForexFunds"
+    integration_status: "Planning phase"
+    offered_funding: "$200,000 max"
+    challenge_type: "Evaluation + Rapid"
+    special_terms: "Priority evaluation for top performers"
+  
+  - name: "The5%ers"
+    integration_status: "Active conversations"
+    offered_funding: "$4,000,000 scaling plan"
+    challenge_type: "Bootcamp program"
+    special_terms: "Direct mentorship from framework team"
+```
+
+### **Strategy Certification Program:**
+```
+🔐 CERTIFIED ALGORITHM BADGES:
+
+🟢 BASIC CERTIFICATION (Free)
+- Passes basic backtest requirements
+- 3+ months simulated trading
+- Risk metrics within limits
+
+🟡 PROFESSIONAL CERTIFICATION ($99)
+- Detailed statistical validation
+- Out-of-sample testing
+- Monte Carlo analysis
+- 6+ months track record
+
+🔴 PROP FIRM READY ($299)
+- Meets specific prop firm requirements
+- Live paper trading verification
+- Drawdown stress testing
+- Custom risk report
+
+🏆 FUNDING GUARANTEED (Partner Program)
+- Direct introduction to prop firms
+- Performance-based fee structure
+- Ongoing strategy optimization
+- Risk management oversight
+```
+
+## 📊 **Community Benefits Structure**
+
+### **For Contributors:**
 ```python
-from ictalgo.backtesting import VectorizedBacktester
+class ContributorBenefits:
+    def __init__(self, contribution_level):
+        self.level = contribution_level
+        self.benefits = self._calculate_benefits()
+    
+    def _calculate_benefits(self):
+        return {
+            'infrastructure': self._infrastructure_access(),
+            'data': self._data_access(),
+            'funding': self._funding_opportunities(),
+            'community': self._community_recognition()
+        }
+    
+    def _infrastructure_access(self):
+        """Tiered infrastructure access"""
+        tiers = {
+            'bronze': 'Basic backtesting (100 cores)',
+            'silver': 'Advanced backtesting + GPU access',
+            'gold': 'Dedicated cluster + real-time data',
+            'platinum': 'Full infrastructure + priority support'
+        }
+        return tiers[self.level]
+```
 
-# Define algorithmic strategy
-strategy = {
-    'name': 'London Breakout',
-    'conditions': [
-        'session == "London"',
-        'volume > volume.rolling(20).mean() * 1.5',
-        'detected_fvg == True'
-    ],
-    'entry': 'break_high' if bullish else 'break_low',
-    'exit': 'target_reached OR stop_loss_hit'
-}
+### **Recognition Program:**
+```
+🏅 CONTRIBUTOR BADGES:
 
-# Run backtest
-backtester = VectorizedBacktester(data, strategy)
-results = backtester.run(
-    initial_capital=10000,
-    commission=0.0001
-)
+🏆 Platinum Partner (Top 1%)
+- Dedicated infrastructure resources
+- Direct prop firm introductions
+- Featured in all marketing
+- Voting rights on roadmap
 
-# Analyze performance
-print(results.metrics)
-results.plot_equity_curve()
+🥇 Gold Contributor (Top 10%)
+- Priority data access
+- Strategy certification credits
+- Early feature access
+- Community moderator status
+
+🥈 Silver Contributor (Top 25%)
+- Enhanced backtesting resources
+- API rate limit increases
+- Discord special role
+- Monthly AMA participation
+
+🥉 Bronze Contributor (Top 50%)
+- Basic backtesting access
+- Community data sharing
+- Contributor certificate
+- Newsletter mention
+```
+
+## 📈 **Business Model & Sustainability**
+
+### **Revenue Streams (To Fund Infrastructure):**
+```yaml
+sustainability_model:
+  freemium_tiers:
+    - free: "Basic framework + community data"
+    - pro: "$29/month - Enhanced backtesting + prop firm prep"
+    - enterprise: "$299/month - Full infrastructure + dedicated support"
+  
+  certification_program:
+    - basic_cert: "Free with community contribution"
+    - pro_cert: "$99 - Detailed validation report"
+    - prop_ready_cert: "$299 - Guaranteed prop firm review"
+  
+  partner_revenue_share:
+    - prop_firm_placements: "10% of first payout"
+    - data_api_commissions: "20% of referrals"
+    - hosting_partnerships: "Revenue sharing"
+```
+
+### **Transparency Promise:**
+```markdown
+## 📢 Financial Transparency
+
+We commit to:
+1. Monthly transparency reports on infrastructure costs
+2. Clear breakdown of revenue allocation
+3. Community voting on budget priorities
+4. Open books for major contributors
+
+Current Monthly Costs:
+- Cloud Infrastructure: $2,500
+- Data Feeds: $1,200
+- Development Tools: $300
+- Community Events: $500
+Total: $4,500/month
+```
+
+## 🚀 **Immediate Action Items**
+
+### **We Need RIGHT NOW:**
+1. **Cloud Credits** for initial deployment
+2. **Basic Data Feeds** for development
+3. **Discord Bot Hosting** for community
+4. **Documentation Site Hosting**
+
+### **Short-term Goals (3 months):**
+1. Community backtesting cluster (100+ cores)
+2. Real-time data pipeline for 10+ instruments
+3. Prop firm partnership (1-2 firms)
+4. Certification program launch
+
+### **Long-term Vision (12 months):**
+1. Full-scale trading infrastructure
+2. Multiple prop firm partnerships
+3. Live funding for proven algorithms
+4. Research papers and industry recognition
+
+## 📞 **Contact & Next Steps**
+
+### **For Serious Partnerships:**
+```yaml
+contact_channels:
+  email: "partners@ictframework.org"
+  discord: "https://discord.gg/ict-partners"
+  calendly: "https://calendly.com/ict-framework/partner-call"
+  proposal_template: "https://docs.google.com/forms/d/ict-partner-proposal"
+```
+
+### **Next Meeting Agenda:**
+```
+NEXT PARTNER MEETING: Weekly Thursday 2 PM UTC
+AGENDA:
+1. Infrastructure needs review
+2. New partnership opportunities
+3. Technical integration updates
+4. Community growth metrics
+5. Financial transparency report
 ```
 
 ---
 
-## 🏗️ **Architecture**
+## 💡 **Why Partner With Us?**
 
+### **For Infrastructure Providers:**
 ```
-ict-algorithmic-framework/
-│
-├── 📁 core/                    # Core framework modules
-│   ├── patterns/              # Pattern detection algorithms
-│   ├── sessions/              # Time-based analysis
-│   ├── liquidity/             # Liquidity detection models
-│   └── market_structure/      # Structure analysis
-│
-├── 📁 data/                   # Data handling
-│   ├── sources/              # Data source connectors
-│   ├── processors/           # Data cleaning & feature engineering
-│   └── storage/              # Data persistence
-│
-├── 📁 models/                 # Statistical & ML models
-│   ├── statistical/          # Hypothesis testing
-│   ├── machine_learning/     # ML pattern recognition
-│   └── validation/           # Model validation
-│
-├── 📁 backtesting/           # Backtesting engines
-│   ├── vectorized/           # Fast vectorized backtesting
-│   ├── event_based/          # Event-driven simulation
-│   └── metrics/              # Performance metrics
-│
-├── 📁 visualization/         # Visualization tools
-│   ├── patterns/             # Pattern visualization
-│   ├── performance/          # Results visualization
-│   └── reports/              # Automated reporting
-│
-├── 📁 research/              # Research utilities
-│   ├── notebooks/            # Jupyter notebook examples
-│   ├── experiments/          # Experimental algorithms
-│   └── papers/               # Research documentation
-│
-└── 📁 api/                   # API interfaces
-    ├── rest/                 # REST API
-    ├── streaming/            # Real-time data API
-    └── clients/              # Client libraries
+✅ Showcase your platform with real trading workloads
+✅ Access to quantitative finance community
+✅ Co-marketing with algorithmic trading brand
+✅ Feedback from demanding technical users
+```
+
+### **For Data Providers:**
+```
+✅ Framework-native integration (automatic adoption)
+✅ Community of data-driven researchers
+✅ Real-world testing of your data quality
+✅ Revenue sharing from premium users
+```
+
+### **For Prop Firms:**
+```
+✅ Pre-validated trader pipeline
+✅ Reduced evaluation costs
+✅ Advanced risk analytics
+✅ Community-driven strategy development
 ```
 
 ---
 
-## 🧮 **Algorithms**
+**📢 Ready to build the future of open-source algorithmic trading together? Let's connect!**
 
-### **1. Statistical Pattern Detection**
-```python
-from ictalgo.patterns.statistical import PatternValidator
+**Join our partner program:** [Partner Application Form](https://forms.gle/ictframework-partners)
 
-# Test if FVGs have statistical significance
-validator = PatternValidator()
+**GitHub Organization:** [https://github.com/ict-algorithmic-framework](https://github.com/ict-algorithmic-framework)
 
-results = validator.test_pattern_significance(
-    pattern='fvg',
-    data=data,
-    test_method='bootstrap',
-    n_iterations=1000,
-    confidence_level=0.95
-)
-
-print(f"Pattern is significant: {results.significant}")
-print(f"P-value: {results.p_value:.4f}")
-print(f"Effect size: {results.effect_size:.4f}")
-```
-
-### **2. Machine Learning Integration**
-```python
-from ictalgo.models.ml import PatternClassifier
-from sklearn.ensemble import RandomForestClassifier
-
-# Train ML model to detect Order Blocks
-classifier = PatternClassifier(
-    model=RandomForestClassifier(n_estimators=100),
-    features=['price', 'volume', 'volatility', 'time_of_day']
-)
-
-# Prepare labeled data
-X_train, y_train, X_test, y_test = classifier.prepare_data(
-    data=data,
-    pattern='order_block',
-    lookahead_bars=5
-)
-
-# Train and evaluate
-classifier.train(X_train, y_train)
-accuracy = classifier.evaluate(X_test, y_test)
-print(f"Model accuracy: {accuracy:.2%}")
-```
-
-### **3. Multi-Timeframe Analysis**
-```python
-from ictalgo.analysis import MultiTimeframeAnalyzer
-
-mta = MultiTimeframeAnalyzer()
-
-# Analyze alignment across timeframes
-alignment = mta.analyze_alignment(
-    data_dict={
-        'M5': data_m5,
-        'H1': data_h1,
-        'H4': data_h4
-    },
-    pattern='market_structure_shift'
-)
-
-# Get convergence signals
-if alignment.convergence_score > 0.8:
-    print("Strong multi-timeframe alignment detected")
-    print(f"Direction: {alignment.consensus_direction}")
-```
+**Discord Community:** [https://discord.gg/ict-trading](https://discord.gg/ict-trading)
 
 ---
 
-## 📈 **Data Science Integration**
-
-### **1. Feature Engineering Pipeline**
-```python
-from ictalgo.data.processors import FeatureEngineer
-
-# Create trading features
-engineer = FeatureEngineer()
-
-features = engineer.create_features(
-    data=data,
-    include=[
-        'returns', 'volatility', 'volume_profile',
-        'session_indicators', 'liquidity_zones',
-        'pattern_density', 'market_regime'
-    ]
-)
-
-# Standardize for ML
-features_scaled = engineer.scale_features(features)
-```
-
-### **2. Hypothesis Testing Framework**
-```python
-from ictalgo.research import TradingHypothesis
-
-# Define and test trading hypothesis
-hypothesis = TradingHypothesis(
-    name="London Open Breakout Edge",
-    null_hypothesis="London open breakouts have no predictive power",
-    alternative_hypothesis="London open breakouts predict direction",
-    test_data=data,
-    test_period='2020-2023'
-)
-
-# Run comprehensive tests
-results = hypothesis.test(
-    tests=['t_test', 'monte_carlo', 'out_of_sample'],
-    confidence_level=0.95
-)
-
-# Generate research report
-report = hypothesis.generate_report()
-report.publish(format='html')
-```
-
-### **3. Performance Analytics**
-```python
-from ictalgo.metrics import AdvancedMetrics
-
-metrics = AdvancedMetrics(trades=backtest_results.trades)
-
-# Comprehensive analysis
-analysis = {
-    'returns': metrics.calculate_returns(),
-    'risk': metrics.calculate_risk_metrics(),
-    'drawdown': metrics.analyze_drawdowns(),
-    'stability': metrics.performance_stability(),
-    'significance': metrics.statistical_significance()
-}
-
-# Create visualization dashboard
-dashboard = metrics.create_dashboard(analysis)
-dashboard.show()
-```
-
----
-
-## 🔬 **Research Examples**
-
-### **Jupyter Notebook: Pattern Recurrence Study**
-```python
-# See /research/notebooks/pattern_recurrence.ipynb
-
-# Study how often patterns repeat
-recurrence_study = {
-    'pattern': 'fair_value_gap',
-    'markets': ['EURUSD', 'GBPUSD', 'XAUUSD'],
-    'timeframes': ['M5', 'M15', 'H1'],
-    'period': '2_years',
-    'metrics': ['recurrence_rate', 'accuracy', 'profit_factor']
-}
-
-# Run study
-results = run_recurrence_study(recurrence_study)
-
-# Visualize results
-plot_correlation_matrix(results.correlation)
-plot_heatmap(results.accuracy_by_market_timeframe)
-```
-
-### **Research Paper Template**
-```latex
-\documentclass{article}
-\usepackage{ictalgo}
-
-\title{Statistical Analysis of ICT Patterns in Forex Markets}
-\author{Research Team}
-
-\begin{document}
-% Automated research paper generation
-\section{Methodology}
-\methodology{pattern='order_block', test='bootstrap'}
-
-\section{Results}
-\results{metrics=['sharpe', 'max_dd', 'win_rate']}
-
-\section{Conclusion}
-\conclusion{significance_level=0.05}
-\end{document}
-```
-
----
-
-## 🤝 **Contributing**
-
-We welcome contributions from data scientists, quant researchers, and developers!
-
-### **Contribution Areas:**
-1. **Algorithm Development** - New pattern detection algorithms
-2. **Statistical Methods** - Enhanced hypothesis testing
-3. **ML Models** - Improved pattern recognition
-4. **Data Processing** - Efficient data pipelines
-5. **Visualization** - Better analysis tools
-6. **Documentation** - Tutorials and examples
-
-### **Development Setup:**
-```bash
-# 1. Fork and clone
-git clone https://github.com/yourusername/ict-algorithmic-framework.git
-
-# 2. Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# 3. Install development dependencies
-pip install -e ".[dev]"
-
-# 4. Run tests
-pytest tests/
-
-# 5. Make changes and submit PR
-```
-
-### **Coding Standards:**
-- Follow PEP 8 guidelines
-- Include type hints
-- Write comprehensive docstrings
-- Add unit tests for new features
-- Update documentation
-
----
-
-## 📚 **Learning Resources**
-
-### **Jupyter Notebook Tutorials:**
-1. `01_pattern_detection_basics.ipynb` - Basic pattern recognition
-2. `02_statistical_validation.ipynb` - Testing pattern significance
-3. `03_backtesting_framework.ipynb` - Complete backtesting workflow
-4. `04_machine_learning.ipynb` - ML integration examples
-5. `05_production_pipeline.ipynb` - Production deployment
-
-### **Video Tutorials:**
-- [Introduction to Algorithmic Trading Framework](link)
-- [Statistical Validation Methods](link)
-- [Building Your First Strategy](link)
-
-### **Community:**
-- **Discord**: Join our data science trading community
-- **GitHub Discussions**: Share research and ask questions
-- **Monthly Webinars**: Live coding sessions
-
----
-
-## 📄 **License**
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-**Key Points:**
-- Free for commercial and non-commercial use
-- Attribution required
-- No warranty provided
-- Not financial advice
-
----
-
-## ⚠️ **Disclaimer**
-
-**THIS IS NOT FINANCIAL ADVICE.**
-
-This framework is for:
-- **Educational purposes** only
-- **Research and study** of market patterns
-- **Academic research** in quantitative finance
-- **Learning algorithmic trading** concepts
-
-**Risks:**
-- Past performance doesn't guarantee future results
-- All trading involves risk of loss
-- Test thoroughly before live trading
-- Consult financial advisors for personal advice
-
----
-
-## 🌟 **Acknowledgments**
-
-- Inspired by ICT market concepts
-- Built by and for the data science community
-- Thanks to all contributors and researchers
-- Special thanks to the open-source financial analysis community
-
----
-
-**🔗 Connect With Us:**
-- GitHub: [ict-algorithmic-framework](https://github.com/yourusername/ict-algorithmic-framework)
-- Documentation: [ReadTheDocs](https://ict-algo-framework.readthedocs.io/)
-- Discord: [Join Community](https://discord.gg/yourlink)
-- Twitter: [@ICTAlgoFramework](https://twitter.com/ICTAlgoFramework)
-
----
-
-*Building better trading algorithms through open collaboration and data science.* 🚀📊🔬
+*Building transparent, collaborative algorithmic trading infrastructure for everyone.* 🚀💻📈
